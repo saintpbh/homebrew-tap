@@ -9,6 +9,11 @@ cask "sermonnote" do
 
   app "맘편한설교노트.app"
 
+  postflight do
+    system_command "xattr",
+                   args: ["-cr", "#{appdir}/맘편한설교노트.app"]
+  end
+
   zap trash: [
     "~/Library/Application Support/com.tauri.sermonnote",
     "~/Library/Caches/com.tauri.sermonnote",
