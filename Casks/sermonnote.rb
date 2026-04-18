@@ -7,7 +7,7 @@ cask "sermonnote" do
   desc "에어갭 환경과 오프라인을 위한 HWP/HWPX 호환 성경 타이핑 에디터"
   homepage "https://github.com/saintpbh/freehwp"
 
-  app "맘편한설교노트.app"
+  app "맘편한설교노트.app", target: "맘편한설교노트.app"
 
   postflight do
     system_command "xattr",
