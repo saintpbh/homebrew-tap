@@ -12,6 +12,8 @@ cask "sermonnote" do
   postflight do
     system_command "xattr",
                    args: ["-cr", "#{appdir}/맘편한설교노트.app"]
+    system_command "codesign",
+                   args: ["--force", "--deep", "--sign", "-", "#{appdir}/맘편한설교노트.app"]
   end
 
   zap trash: [
